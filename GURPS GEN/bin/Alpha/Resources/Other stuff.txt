@@ -1,0 +1,38 @@
+
+=====!Universal!======
+ Empty slot [1] $0 &0 ++0 <> //Пустая строка !Universal!
+=========!Universal! Enchants========
+=!Universal! Fortify===
+Fortify 1 [1] $0 &1 ++50 <зачарован слабым укреплением> !Universal!
+Fortify 2 [1] $0 &2 ++6600 <зачарован укреплением> !Universal!
+Fortify 3 [1] $0 &3 ++26400 <зачарован сильным укреплением> !Universal!
+Fortify 4 [1] $0 &4 ++99000 <зачарован мастерским укреплением> !Universal!
+Fortify 5 [1] $0 &5 ++264000 <зачарован божественным укреплением> !Universal!
+=!Universal! Deflect===
+Deflect 1 [1] $0 &0 ++3300 <зачарован на отражение +1 ПЗ> !Universal!
+Deflect 2 [1] $0 &0 ++16500 <зачарован на отражение +2 ПЗ> !Universal!
+Deflect 3 [1] $0 &0 ++66000 <зачарован на отражение +3 ПЗ> !Universal!
+Deflect 4 [1] $0 &0 ++264000 <зачарован на отражение +4 ПЗ> !Universal!
+Deflect 5 [1] $0 &0 ++660000 <зачарован на отражение +5 ПЗ> !Universal!
+=!Universal! Lighten=
+Lighten 1 [0,75] $0 &0 ++3300 <магически облегчен на четверть веса> !Universal!
+Lighten 2 [0,5] $0 &0 ++16500 <магически облегчен на четверть веса> !Universal!
+=====!Universal! Tailoring, Style, pick only one=======
+!Universal! Stylish [1] $1 &0 ++0 <+1 к реакции ценителей>
+!Universal! Beutiful [1] $4 &0 ++0 <+2 к реакции ценителей>
+!Universal! Gorgeus [1] $9 &0 ++0 <+3 к реакции ценителей>
+
+=====!Universal! Tailoring, pick only one=======
+ Expert tailoring [0,85] $5 &0 ++0 <-1 к ударам в сочленения> !Universal!
+ Master tailoring [0,7] $29 &0 ++0 <-1 к ударам в сочленения> !Universal!
+
+=====!Flexible!======
+!Flexible! Test buff [1] $2 &0 ++0 <+2 к проверкам издаваемого шума>
+
+
+=====!Rigid!======
+!Rigid! Hardened steel [1] $4 &1 ++0 <>//+1 к др
+=!Rigid! plate only=
+!Rigid! Duplex plate [0,9] $8 &1 ++0 <>//не сочетается с Hardened steel
+=!Rigid! Scale,plate, lammelar only=
+!Rigid! Fluting [0,9] $4 &0 ++0 <>
