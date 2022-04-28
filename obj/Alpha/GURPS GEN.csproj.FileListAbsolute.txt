@@ -1,0 +1,13 @@
+C:\Users\Аки\source\repos\GURPS GEN\bin\Alpha\Resources\Armor table.txt
+C:\Users\Аки\source\repos\GURPS GEN\bin\Alpha\Resources\Armor type.txt
+C:\Users\Аки\source\repos\GURPS GEN\bin\Alpha\Resources\Other stuff.txt
+C:\Users\Аки\source\repos\GURPS GEN\bin\Alpha\GURPS GEN.exe.config
+C:\Users\Аки\source\repos\GURPS GEN\bin\Alpha\GURPS GEN.exe
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS GEN.csproj.SuggestedBindingRedirects.cache
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS_GEN.Form1.resources
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS_GEN.Form2.resources
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS_GEN.Properties.Resources.resources
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS GEN.csproj.GenerateResource.cache
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS GEN.csproj.CoreCompileInputs.cache
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS GEN.exe
+C:\Users\Аки\source\repos\GURPS GEN\obj\Alpha\GURPS GEN.csproj.AssemblyReference.cache
