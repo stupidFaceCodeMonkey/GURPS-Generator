@@ -1,0 +1,21 @@
+Types Flexible
+============
+Fabric [1] $1 &1 F/O TL 1+ <>
+TL 6+ Optimized Fabric [0,8] $2 &2 F/O <>
+
+Types Rigid/solid
+============
+Scales [1,1] $0,8 &2 R/S TL 9+ <-1 DR vs, crushing unless armor is DR 4+>
+TL 9+ Solid [1] $1 &2  Solid <>
+
+TL 9+ Segmented Plate [1,45] $0,9 &3 R/S <>
+TL 1-9 Segmented Plate [1,45] $1,5 &3 R/S <>
+
+TL 1-9 Plate [0,8] $5 &3 R/S <>
+TL 9+ Plate [0,8] $1,5 &3 R/S <>
+
+TL Chainmail [0,7] $3,5 &2 R/S <>
+
+TL 6+ Impact-Absorbing [0.65] $5   &2 R/S  <Half DR vs. damage that isn’t crushing>
+TL 9+ Impact-Absorbing [0,65] $1,5 &2 R/S  <Half DR vs, damage that isn’t crushing>
+
