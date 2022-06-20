@@ -14,6 +14,7 @@ namespace GURPS_GEN
     public partial class Form1 : Form
     {
         Form2 form2 = new Form2();
+        Form3 form3 = new Form3();
        
         public Form1()
         {
@@ -407,6 +408,9 @@ namespace GURPS_GEN
              
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form3.Show();
+        }
     }
 }
