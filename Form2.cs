@@ -81,6 +81,7 @@ namespace GURPS_GEN
             Skull.Checked = Face.Checked = Neck.Checked = Torso.Checked = Vitals.Checked = Abdomen.Checked = Groin.Checked = Arms.Checked = Hands.Checked = Legs.Checked = Feet.Checked = false;
             Leg_Click(null, null);
             Arm_Check_Changed(null, null);
+            
         }
 
         private void buttonCheckAll_Click(object sender, EventArgs e)
