@@ -60,15 +60,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button_ToMentor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.калькуляторыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.калькуляторЛуковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDR)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GoButtonName
             // 
             this.GoButtonName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GoButtonName.Location = new System.Drawing.Point(747, 434);
+            this.GoButtonName.Location = new System.Drawing.Point(747, 552);
             this.GoButtonName.Name = "GoButtonName";
             this.GoButtonName.Size = new System.Drawing.Size(139, 58);
             this.GoButtonName.TabIndex = 0;
@@ -80,7 +84,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(13, 15);
+            this.Label1.Location = new System.Drawing.Point(12, 39);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(60, 13);
             this.Label1.TabIndex = 2;
@@ -89,7 +93,7 @@
             // ComboBoxMaterial
             // 
             this.ComboBoxMaterial.FormattingEnabled = true;
-            this.ComboBoxMaterial.Location = new System.Drawing.Point(16, 31);
+            this.ComboBoxMaterial.Location = new System.Drawing.Point(15, 55);
             this.ComboBoxMaterial.Name = "ComboBoxMaterial";
             this.ComboBoxMaterial.Size = new System.Drawing.Size(400, 21);
             this.ComboBoxMaterial.TabIndex = 3;
@@ -99,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(429, 15);
+            this.label2.Location = new System.Drawing.Point(429, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 4;
@@ -107,7 +111,7 @@
             // 
             // numericUpDownDR
             // 
-            this.numericUpDownDR.Location = new System.Drawing.Point(432, 31);
+            this.numericUpDownDR.Location = new System.Drawing.Point(432, 55);
             this.numericUpDownDR.Minimum = new decimal(new int[] {
             1,
             0,
@@ -124,7 +128,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(531, 32);
+            this.textBox1.Location = new System.Drawing.Point(531, 56);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -134,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(528, 16);
+            this.label3.Location = new System.Drawing.Point(528, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 7;
@@ -145,17 +149,17 @@
             this.textBoxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOutput.Location = new System.Drawing.Point(433, 150);
+            this.textBoxOutput.Location = new System.Drawing.Point(433, 210);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxOutput.Size = new System.Drawing.Size(453, 273);
+            this.textBoxOutput.Size = new System.Drawing.Size(453, 331);
             this.textBoxOutput.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 55);
+            this.label4.Location = new System.Drawing.Point(12, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 9;
@@ -169,7 +173,7 @@
             "Обычное",
             "Отличное",
             "Превосходное"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 71);
+            this.comboBox1.Location = new System.Drawing.Point(15, 95);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(400, 21);
             this.comboBox1.TabIndex = 10;
@@ -177,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 64);
+            this.label6.Location = new System.Drawing.Point(12, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 12;
@@ -195,7 +199,7 @@
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 138);
+            this.groupBox1.Location = new System.Drawing.Point(5, 162);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(410, 379);
             this.groupBox1.TabIndex = 13;
@@ -294,7 +298,7 @@
             // cb_ArmorType
             // 
             this.cb_ArmorType.FormattingEnabled = true;
-            this.cb_ArmorType.Location = new System.Drawing.Point(16, 111);
+            this.cb_ArmorType.Location = new System.Drawing.Point(15, 135);
             this.cb_ArmorType.Name = "cb_ArmorType";
             this.cb_ArmorType.Size = new System.Drawing.Size(400, 21);
             this.cb_ArmorType.TabIndex = 0;
@@ -303,7 +307,7 @@
             // ButtonHitZone
             // 
             this.ButtonHitZone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonHitZone.Location = new System.Drawing.Point(432, 434);
+            this.ButtonHitZone.Location = new System.Drawing.Point(432, 552);
             this.ButtonHitZone.Name = "ButtonHitZone";
             this.ButtonHitZone.Size = new System.Drawing.Size(152, 53);
             this.ButtonHitZone.TabIndex = 14;
@@ -314,7 +318,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 95);
+            this.label5.Location = new System.Drawing.Point(12, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 13);
             this.label5.TabIndex = 15;
@@ -322,7 +326,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(651, 31);
+            this.textBox2.Location = new System.Drawing.Point(651, 55);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -331,7 +335,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(771, 31);
+            this.textBox3.Location = new System.Drawing.Point(771, 55);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -341,7 +345,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(648, 16);
+            this.label7.Location = new System.Drawing.Point(648, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 13);
             this.label7.TabIndex = 18;
@@ -350,7 +354,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(771, 16);
+            this.label8.Location = new System.Drawing.Point(771, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 19;
@@ -359,7 +363,7 @@
             // button_ToMentor
             // 
             this.button_ToMentor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ToMentor.Location = new System.Drawing.Point(771, 76);
+            this.button_ToMentor.Location = new System.Drawing.Point(770, 88);
             this.button_ToMentor.Name = "button_ToMentor";
             this.button_ToMentor.Size = new System.Drawing.Size(115, 50);
             this.button_ToMentor.TabIndex = 20;
@@ -367,22 +371,44 @@
             this.button_ToMentor.UseVisualStyleBackColor = true;
             this.button_ToMentor.Click += new System.EventHandler(this.button_ToMentor_Click);
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.Location = new System.Drawing.Point(518, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 19);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.калькуляторыToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(897, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // калькуляторыToolStripMenuItem
+            // 
+            this.калькуляторыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.калькуляторЛуковToolStripMenuItem});
+            this.калькуляторыToolStripMenuItem.Name = "калькуляторыToolStripMenuItem";
+            this.калькуляторыToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.калькуляторыToolStripMenuItem.Text = "Калькуляторы";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // калькуляторЛуковToolStripMenuItem
+            // 
+            this.калькуляторЛуковToolStripMenuItem.Name = "калькуляторЛуковToolStripMenuItem";
+            this.калькуляторЛуковToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.калькуляторЛуковToolStripMenuItem.Text = "Калькулятор луков";
+            this.калькуляторЛуковToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 529);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(897, 647);
             this.Controls.Add(this.button_ToMentor);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -403,11 +429,15 @@
             this.Controls.Add(this.cb_ArmorType);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.GoButtonName);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "GURPS Gen v1.0.1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDR)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,7 +476,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button_ToMentor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem калькуляторыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem калькуляторЛуковToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
     }
 }
 

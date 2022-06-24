@@ -15,6 +15,7 @@ namespace GURPS_GEN
     {
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
+        AboutBox1 aboutBox1 = new AboutBox1();
        
         public Form1()
         {
@@ -411,6 +412,11 @@ namespace GURPS_GEN
         private void button1_Click(object sender, EventArgs e)
         {
             form3.Show();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboutBox1.Show();
         }
     }
 }

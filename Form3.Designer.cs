@@ -51,8 +51,6 @@
             this.Go_Button = new System.Windows.Forms.Button();
             this.CBisCinematic = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.numUDMaxDraw = new System.Windows.Forms.NumericUpDown();
-            this.numUDMinThiccness = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.OutputTextBox = new System.Windows.Forms.TextBox();
             this.numUDArrowWeight = new System.Windows.Forms.NumericUpDown();
@@ -62,6 +60,8 @@
             this.CBArrowMaterial = new System.Windows.Forms.ComboBox();
             this.CBArrowHeads = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.TBMinThicness = new System.Windows.Forms.TextBox();
+            this.TBMaxDraw = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numUDDrawWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDThiccness)).BeginInit();
@@ -69,8 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUDn_Crossection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDDrawLenght)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDMaxDraw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDMinThiccness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDArrowWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDloops)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +78,7 @@
             this.Combox_Material.FormattingEnabled = true;
             this.Combox_Material.Location = new System.Drawing.Point(12, 25);
             this.Combox_Material.Name = "Combox_Material";
-            this.Combox_Material.Size = new System.Drawing.Size(249, 21);
+            this.Combox_Material.Size = new System.Drawing.Size(619, 21);
             this.Combox_Material.TabIndex = 0;
             this.Combox_Material.SelectedIndexChanged += new System.EventHandler(this.MaterialChanged);
             // 
@@ -119,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 89);
+            this.label3.Location = new System.Drawing.Point(12, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 4;
@@ -215,7 +213,7 @@
             // 
             // numUDWorkingLenght
             // 
-            this.numUDWorkingLenght.Location = new System.Drawing.Point(167, 106);
+            this.numUDWorkingLenght.Location = new System.Drawing.Point(56, 188);
             this.numUDWorkingLenght.Minimum = new decimal(new int[] {
             5,
             0,
@@ -234,7 +232,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(164, 89);
+            this.label7.Location = new System.Drawing.Point(56, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 13);
             this.label7.TabIndex = 14;
@@ -243,7 +241,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 136);
+            this.label8.Location = new System.Drawing.Point(56, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(155, 13);
             this.label8.TabIndex = 15;
@@ -253,11 +251,11 @@
             // 
             this.numUDn_Crossection.DecimalPlaces = 2;
             this.numUDn_Crossection.Increment = new decimal(new int[] {
-            25,
+            5,
             0,
             0,
             131072});
-            this.numUDn_Crossection.Location = new System.Drawing.Point(12, 152);
+            this.numUDn_Crossection.Location = new System.Drawing.Point(56, 147);
             this.numUDn_Crossection.Minimum = new decimal(new int[] {
             5,
             0,
@@ -275,7 +273,7 @@
             // 
             // numUDDrawLenght
             // 
-            this.numUDDrawLenght.Location = new System.Drawing.Point(167, 152);
+            this.numUDDrawLenght.Location = new System.Drawing.Point(12, 228);
             this.numUDDrawLenght.Name = "numUDDrawLenght";
             this.numUDDrawLenght.Size = new System.Drawing.Size(120, 22);
             this.numUDDrawLenght.TabIndex = 17;
@@ -289,7 +287,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(164, 136);
+            this.label9.Location = new System.Drawing.Point(12, 213);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 13);
             this.label9.TabIndex = 18;
@@ -298,7 +296,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(298, 89);
+            this.label10.Location = new System.Drawing.Point(53, 294);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(143, 13);
             this.label10.TabIndex = 19;
@@ -306,7 +304,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(301, 106);
+            this.numericUpDown2.Location = new System.Drawing.Point(56, 311);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 20;
@@ -340,39 +338,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(298, 137);
+            this.label11.Location = new System.Drawing.Point(135, 212);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 13);
             this.label11.TabIndex = 23;
             this.label11.Text = "Максимум оттягивания";
             // 
-            // numUDMaxDraw
-            // 
-            this.numUDMaxDraw.Location = new System.Drawing.Point(301, 152);
-            this.numUDMaxDraw.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numUDMaxDraw.Name = "numUDMaxDraw";
-            this.numUDMaxDraw.ReadOnly = true;
-            this.numUDMaxDraw.Size = new System.Drawing.Size(120, 22);
-            this.numUDMaxDraw.TabIndex = 24;
-            // 
-            // numUDMinThiccness
-            // 
-            this.numUDMinThiccness.DecimalPlaces = 2;
-            this.numUDMinThiccness.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numUDMinThiccness.Location = new System.Drawing.Point(12, 193);
-            this.numUDMinThiccness.Name = "numUDMinThiccness";
-            this.numUDMinThiccness.ReadOnly = true;
-            this.numUDMinThiccness.Size = new System.Drawing.Size(120, 22);
-            this.numUDMinThiccness.TabIndex = 25;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 177);
+            this.label12.Location = new System.Drawing.Point(132, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(160, 13);
             this.label12.TabIndex = 26;
@@ -380,7 +355,7 @@
             // 
             // OutputTextBox
             // 
-            this.OutputTextBox.Location = new System.Drawing.Point(167, 192);
+            this.OutputTextBox.Location = new System.Drawing.Point(12, 383);
             this.OutputTextBox.Multiline = true;
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.ReadOnly = true;
@@ -395,13 +370,14 @@
             0,
             0,
             196608});
-            this.numUDArrowWeight.Location = new System.Drawing.Point(454, 106);
+            this.numUDArrowWeight.Location = new System.Drawing.Point(295, 269);
             this.numUDArrowWeight.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             262144});
             this.numUDArrowWeight.Name = "numUDArrowWeight";
+            this.numUDArrowWeight.ReadOnly = true;
             this.numUDArrowWeight.Size = new System.Drawing.Size(120, 22);
             this.numUDArrowWeight.TabIndex = 28;
             this.numUDArrowWeight.Value = new decimal(new int[] {
@@ -413,7 +389,7 @@
             // 
             // numUDloops
             // 
-            this.numUDloops.Location = new System.Drawing.Point(12, 234);
+            this.numUDloops.Location = new System.Drawing.Point(56, 269);
             this.numUDloops.Minimum = new decimal(new int[] {
             1,
             0,
@@ -431,7 +407,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 218);
+            this.label13.Location = new System.Drawing.Point(56, 253);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 30;
@@ -440,7 +416,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(298, 9);
+            this.label14.Location = new System.Drawing.Point(292, 171);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 13);
             this.label14.TabIndex = 32;
@@ -449,35 +425,53 @@
             // CBArrowMaterial
             // 
             this.CBArrowMaterial.FormattingEnabled = true;
-            this.CBArrowMaterial.Location = new System.Drawing.Point(301, 25);
+            this.CBArrowMaterial.Location = new System.Drawing.Point(295, 187);
             this.CBArrowMaterial.Name = "CBArrowMaterial";
-            this.CBArrowMaterial.Size = new System.Drawing.Size(249, 21);
+            this.CBArrowMaterial.Size = new System.Drawing.Size(481, 21);
             this.CBArrowMaterial.TabIndex = 31;
             this.CBArrowMaterial.SelectedIndexChanged += new System.EventHandler(this.CBArrowMaterial_SelectedIndexChanged);
             // 
             // CBArrowHeads
             // 
             this.CBArrowHeads.FormattingEnabled = true;
-            this.CBArrowHeads.Location = new System.Drawing.Point(301, 65);
+            this.CBArrowHeads.Location = new System.Drawing.Point(295, 229);
             this.CBArrowHeads.Name = "CBArrowHeads";
-            this.CBArrowHeads.Size = new System.Drawing.Size(249, 21);
+            this.CBArrowHeads.Size = new System.Drawing.Size(481, 21);
             this.CBArrowHeads.TabIndex = 33;
             this.CBArrowHeads.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(451, 90);
+            this.label15.Location = new System.Drawing.Point(292, 253);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(79, 13);
             this.label15.TabIndex = 34;
             this.label15.Text = "Масса стрелы";
             // 
+            // TBMinThicness
+            // 
+            this.TBMinThicness.Location = new System.Drawing.Point(138, 105);
+            this.TBMinThicness.Name = "TBMinThicness";
+            this.TBMinThicness.ReadOnly = true;
+            this.TBMinThicness.Size = new System.Drawing.Size(100, 22);
+            this.TBMinThicness.TabIndex = 35;
+            // 
+            // TBMaxDraw
+            // 
+            this.TBMaxDraw.Location = new System.Drawing.Point(138, 227);
+            this.TBMaxDraw.Name = "TBMaxDraw";
+            this.TBMaxDraw.ReadOnly = true;
+            this.TBMaxDraw.Size = new System.Drawing.Size(100, 22);
+            this.TBMaxDraw.TabIndex = 36;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 450);
+            this.ClientSize = new System.Drawing.Size(836, 528);
+            this.Controls.Add(this.TBMaxDraw);
+            this.Controls.Add(this.TBMinThicness);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.CBArrowHeads);
             this.Controls.Add(this.label14);
@@ -487,8 +481,6 @@
             this.Controls.Add(this.numUDArrowWeight);
             this.Controls.Add(this.OutputTextBox);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.numUDMinThiccness);
-            this.Controls.Add(this.numUDMaxDraw);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.CBisCinematic);
             this.Controls.Add(this.Go_Button);
@@ -523,8 +515,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUDn_Crossection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDDrawLenght)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDMaxDraw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDMinThiccness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDArrowWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDloops)).EndInit();
             this.ResumeLayout(false);
@@ -557,8 +547,6 @@
         private System.Windows.Forms.Button Go_Button;
         private System.Windows.Forms.CheckBox CBisCinematic;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown numUDMaxDraw;
-        private System.Windows.Forms.NumericUpDown numUDMinThiccness;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox OutputTextBox;
         private System.Windows.Forms.NumericUpDown numUDArrowWeight;
@@ -568,5 +556,7 @@
         private System.Windows.Forms.ComboBox CBArrowMaterial;
         private System.Windows.Forms.ComboBox CBArrowHeads;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox TBMinThicness;
+        private System.Windows.Forms.TextBox TBMaxDraw;
     }
 }

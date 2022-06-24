@@ -60,9 +60,9 @@ namespace GURPS_GEN
 
         private void MaterialChanged(object sender, EventArgs e)
         {
-            if(Combox_Material.Text != "")
+            if(Combox_Material.SelectedItem != null)
             {
-                mainMaterial = Met_GetMaterialFromString(Combox_Material.Text);
+                mainMaterial = Met_GetMaterialFromString(Combox_Material.SelectedItem.ToString());
                 //shoud force user to pick material
             }
 
@@ -71,8 +71,10 @@ namespace GURPS_GEN
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            if (Combox_Material.Text == "") { Combox_Material.DroppedDown = true; }
+            if (Combox_Material.SelectedItem == null) { Combox_Material.DroppedDown = true; }
             else if (ComboxCrossection.SelectedItem == null) { ComboxCrossection.DroppedDown = true; }
+            else if (CBArrowMaterial.SelectedItem == null) { CBArrowMaterial.DroppedDown = true; }
+            else if (CBArrowHeads.SelectedItem == null) { CBArrowHeads.DroppedDown = true; }
             else
             {
                 bow.Thickness = Convert.ToDouble(numUDThiccness.Value);
@@ -83,9 +85,9 @@ namespace GURPS_GEN
                 bow.DrawWeightLbs = Convert.ToInt32(numUDDrawWeight.Value);
                 bow.Deflection = BowCalculator.Met_Deflection(12 / bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Elastic, bow.Thickness);
                 bow.Theta = BowCalculator.Met_ThetaCalculation(bow.Deflection, bow.BowWorkLenghtInches);
-                bow.DrawLenghtMax = BowCalculator.Met_MaxDrawLenght(Convert.ToInt32(numUDloops.Value), bow.BowUselessLenghtInches, bow.BowWorkLenghtInches, bow.Theta, bow.Deflection);
-                numUDMaxDraw.Value = Convert.ToDecimal(bow.DrawLenghtMax);
-                numUDMinThiccness.Value = Convert.ToDecimal(BowCalculator.Met_MinThicness(12 / bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Breaking / bow.Limbstuff.breakingStrenghtDivider));
+                bow.DrawLenghtMax =Math.Round(BowCalculator.Met_MaxDrawLenght(Convert.ToInt32(numUDloops.Value), bow.BowUselessLenghtInches, bow.BowWorkLenghtInches, bow.Theta, bow.Deflection));
+                TBMaxDraw.Text = Convert.ToString(bow.DrawLenghtMax);
+                TBMinThicness.Text = Convert.ToString(Math.Round(BowCalculator.Met_MinThicness(12 / bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Breaking / bow.Limbstuff.breakingStrenghtDivider),2));
 
             }
         }
@@ -119,8 +121,10 @@ namespace GURPS_GEN
 
         private void Go_Button_Click(object sender, EventArgs e)//all the stuff calculated
         {
-            if (Combox_Material.Text == "") { Combox_Material.DroppedDown = true; }
+            if (Combox_Material.SelectedItem == null) { Combox_Material.DroppedDown = true; }
             else if (ComboxCrossection.SelectedItem == null) { ComboxCrossection.DroppedDown = true; }
+            else if (CBArrowMaterial.SelectedItem == null) { CBArrowMaterial.DroppedDown = true; }
+            else if (CBArrowHeads.SelectedItem == null) { CBArrowHeads.DroppedDown = true; }
             else
             {
                 
@@ -132,9 +136,9 @@ namespace GURPS_GEN
                 bow.DrawWeightLbs = Convert.ToInt32(numUDDrawWeight.Value);
                 bow.Deflection = BowCalculator.Met_Deflection(12 / bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Elastic, bow.Thickness);
                 bow.Theta = BowCalculator.Met_ThetaCalculation(bow.Deflection, bow.BowWorkLenghtInches);
-                bow.DrawLenghtMax = BowCalculator.Met_MaxDrawLenght(Convert.ToInt32(numUDloops.Value), bow.BowUselessLenghtInches, bow.BowWorkLenghtInches, bow.Theta, bow.Deflection);
-                numUDMaxDraw.Value = Convert.ToDecimal(bow.DrawLenghtMax);
-                numUDMinThiccness.Value =Convert.ToDecimal(BowCalculator.Met_MinThicness(12/bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Breaking/bow.Limbstuff.breakingStrenghtDivider));
+                bow.DrawLenghtMax = Math.Round(BowCalculator.Met_MaxDrawLenght(Convert.ToInt32(numUDloops.Value), bow.BowUselessLenghtInches, bow.BowWorkLenghtInches, bow.Theta, bow.Deflection));
+                TBMaxDraw.Text = Convert.ToString(bow.DrawLenghtMax);
+                TBMinThicness.Text = Convert.ToString(Math.Round(BowCalculator.Met_MinThicness(12 / bow.CrossSection, bow.DrawWeightLbs, bow.BowWorkLenghtInches, mainMaterial.Breaking / bow.Limbstuff.breakingStrenghtDivider),2));
                 bow.DrawLenghtInches = Convert.ToInt32(numUDDrawLenght.Value);
                 bow.BowWeight = BowCalculator.Met_BowWeight(mainMaterial.Dencity, bow.BowWorkLenghtInches, bow.Thickness, bow.CrossSection, 0, 0);
                 bow.StoredEnergy = BowCalculator.Met_StoredEnergy(bow.DrawWeightLbs, bow.DrawLenghtInches, bow.Limbstuff.potentialEnergyMod);//done
@@ -212,5 +216,7 @@ namespace GURPS_GEN
         {
             arrowTip = ArrowCalculator.Met_arrowTip_stringToData(CBArrowHeads.SelectedItem.ToString());
         }
+
+        
     }
 }
