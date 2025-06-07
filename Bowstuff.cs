@@ -225,12 +225,12 @@ namespace GURPS_GEN
             dice ret = new dice();
             if (isCinimatic == true)
             {                
-                ret.rawNumbers = Convert.ToInt32( Math.Sqrt(arrowEnergy / 1.5));
+                ret.rawNumbers = Convert.ToInt32( Math.Sqrt(arrowEnergy) / 1.5);
                 return ret;
             }
             else
             {
-                ret.rawNumbers = Convert.ToInt32(Math.Sqrt(arrowEnergy / 2.5));
+                ret.rawNumbers = Convert.ToInt32(Math.Sqrt(arrowEnergy) / 2.5);
                 return ret;
             }
         }
@@ -265,6 +265,8 @@ namespace GURPS_GEN
     {
         public static double Met_DiameterNMass(int DrawForce, int ShaftLenght, double Elastic, double Dencity, bool IsHollow, double Dinner)//будет много багов с матаном
         {
+            if (Dencity == 0) {Dencity = 0.0001;}
+            if (Elastic == 0) {Elastic = 0.0001;}
             double A = 1.25 * Math.Exp(-5.4 * (Elastic / Dencity) * Math.Pow(10, -9));
             Console.WriteLine(A);
             double firstStep = (DrawForce * ShaftLenght * ShaftLenght) / (A * Elastic);

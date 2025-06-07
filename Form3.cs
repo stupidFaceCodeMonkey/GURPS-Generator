@@ -39,7 +39,7 @@ namespace GURPS_GEN
 
              definedMaterial.BowCost = Convert.ToDouble(stringDataOfMaterial.Substring((stringDataOfMaterial.IndexOf("CostPerPound:\"")) + 14, stringDataOfMaterial.IndexOf("\" ", stringDataOfMaterial.IndexOf("CostPerPound:\"")) - stringDataOfMaterial.IndexOf("CostPerPound:\"") - 14));
 
-             definedMaterial.ArrowCost = Convert.ToDouble(stringDataOfMaterial.Substring((stringDataOfMaterial.IndexOf("ArrowCost:\"")) + 11, stringDataOfMaterial.IndexOf("\" ", stringDataOfMaterial.IndexOf("ArrowCost:\"")) - stringDataOfMaterial.IndexOf("ArrowCost:\"") - 11));
+             definedMaterial.ArrowCost = Convert.ToDouble(stringDataOfMaterial.Substring((stringDataOfMaterial.IndexOf("ArrowCost:\"")) + 11, stringDataOfMaterial.IndexOf("\";", stringDataOfMaterial.IndexOf("ArrowCost:\"")) - stringDataOfMaterial.IndexOf("ArrowCost:\"") - 11));
 
 
 
